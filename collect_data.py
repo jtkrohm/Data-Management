@@ -13,7 +13,7 @@ print(x)
 m = datetime.datetime.today().month
 y = datetime.datetime.today().year
 t = str(datetime.datetime.now().time())
-data = [x]
+df = pd.DataFrame([x])
 
 
 while True:
@@ -22,6 +22,9 @@ while True:
 	m = datetime.datetime.today().month
 	y = datetime.datetime.today().year
 	t = str(datetime.datetime.now().time())
-	data.append([t, dayx[day_raw], m, y])
-	print(data[-1])
+	#row.append([t, dayx[day_raw], m, y])
+	#print(row[-1])
+	df = df.append(pd.DataFrame([t, dayx[day_raw], m, y]))
+	print(df[-1])
 	time.sleep(15)
+
