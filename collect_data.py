@@ -25,4 +25,6 @@ while True:
 	y = datetime.datetime.today().year
 	t = str(datetime.datetime.now().time())
 	data.append([t, dayx[day_raw], m, y]) 
-	time.sleep(15) print(data[-1]) 
+        print(data[-1])
+	time.sleep(15) 
+ 
