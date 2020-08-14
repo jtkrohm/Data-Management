@@ -21,8 +21,8 @@ data = [x]
 while True: 
 	today = date.today
 	day_raw = datetime.datetime.today().weekday() 
-	data.append([t, dayx[day_raw], m, y]) 
-	time.sleep(15) print(data[-1]) 
 	m = datetime.datetime.today().month 
 	y = datetime.datetime.today().year
 	t = str(datetime.datetime.now().time())
+	data.append([t, dayx[day_raw], m, y]) 
+	time.sleep(15) print(data[-1]) 
