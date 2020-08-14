@@ -8,13 +8,11 @@ dayx = {0:"Monday",1:"Tuesday",2:"Wednesday",3:"Thursday",4:"Friday",5:"Saturday
 day_raw = datetime.datetime.today().weekday()
 today = date.today
 x = ["Time","Day", "Month","Year"]
-#print(dayx[day_raw])
-print(x)
 m = datetime.datetime.today().month
 y = datetime.datetime.today().year
 t = str(datetime.datetime.now().time())
 df = pd.DataFrame([x])
-
+print(df)
 
 while True:
 	today = date.today
@@ -24,7 +22,12 @@ while True:
 	t = str(datetime.datetime.now().time())
 	#row.append([t, dayx[day_raw], m, y])
 	#print(row[-1])
-	df = df.append(pd.DataFrame([t, dayx[day_raw], m, y]))
-	print(df[-1])
+	df1 = pd.DataFrame([t, dayx[day_raw], m, y]), columns=x)
+	df.append(df1, ignore_index = True) 
+	print(df.tail)
 	time.sleep(15)
+
+
+
+
 
