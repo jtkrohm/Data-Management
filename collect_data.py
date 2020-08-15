@@ -11,7 +11,8 @@ x = ["Time","Day", "Month","Year"]
 m = datetime.datetime.today().month
 y = datetime.datetime.today().year
 t = str(datetime.datetime.now().time())
-df = pd.DataFrame([x])
+df = pd.DataFrame([[t, dayx[day_raw], m, y]])
+df.columns = x
 print(df)
 
 while True:
@@ -22,10 +23,11 @@ while True:
 	t = str(datetime.datetime.now().time())
 	#row.append([t, dayx[day_raw], m, y])
 	#print(row[-1])
-	df1 = pd.DataFrame([t, dayx[day_raw], m, y]), columns=x)
-	df.append(df1, ignore_index = True) 
-	print(df.tail)
-	time.sleep(15)
+	df1 = pd.DataFrame([[t, dayx[day_raw], m, y]])
+	df1.columns = x
+	df1.append([df1], ignore_index = True) 
+	print(df1)
+#	time.sleep(15)
 
 
 
