@@ -1,12 +1,12 @@
-# automate_python
+# Automate_python
 
-This repository will contain code that automates tasks using python 
+This repository will contain code that information using python 
 
-1. Create virtual servers with bash and python
+1. Create databases with MongoDB and python
+2. Scrape Reliable Web Sources for Relevant Data
+3. Organize files from downloads folder based on file extension
 
-2. Move files from downloads folder based on file extension
-
-3. Create dash board to summarize the types of files in a directory 
+4. Create dash board to summarize the types of files in a directory 
 
 
 ```markdown
